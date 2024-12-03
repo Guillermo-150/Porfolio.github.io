@@ -1,0 +1,33 @@
+intento numero 2, odio github
+
+npm create astro@latest
+
+npx astro add tailwind
+
+npm run build
+
+npm run dev
+
+cambiar la font de la pagina: https://fontsource.org/
+
+npm install @fontsource-variable/noto-serif
+
+body {
+  font-family: 'Noto Serif Variable', serif;
+}
+
+Paleta de colores: https://g.co/kgs/Ba4ciFA
+
+gradientes: https://bg.ibelick.com/
+
+iconos: https://tabler.io/icons
+
+iconos colores: https://svgl.app/
+
+
+simbolo magico: ``````
+
+
+
+
+

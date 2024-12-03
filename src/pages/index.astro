@@ -1,11 +1,82 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Badge from '../components/Badge.astro';
+import Social from '../components/Social.astro';
 import Layout from '../layouts/Layout.astro';
+import Linkedin from '../components/Icons/Linkedin.astro';
+import Github from '../components/Icons/Github.astro';
+import Unity from '../components/Icons/Unity.astro';
+import School from '../components/Icons/School.astro';
+import Email from '../components/Icons/Email.astro';
+import Instragram from '../components/Icons/Instragram.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Experience from '../components/Experience.astro';
+import Briefcase from '../components/Icons/Briefcase.astro';
+import Code from '../components/Icons/Code.astro';
+import Proyects from '../components/Proyects.astro';
+import Certification from '../components/Icons/Certification.astro';
+import Certificate from '../components/Certificate.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
 ---
 
-<Layout>
-	<Welcome />
+<Layout 
+	title="Porfolio de Guillermo"
+	description="Interesado en crear proyectos y mejorar mis habilidades">
+	<main class="px-4">
+		<SectionContainer class="py-40 pb-2">
+		<h1 class="text-white text-4xl font-bold flex flex-row gap-x-4 pb-10">
+			Hey, Soy Guillermo <Badge>Estudiando</Badge></h1>
+		<h2 class="text-xl opacity-80 text-pretty">
+			Cursando el cuarto semestre de Ingenieria en Informatica en Duoc Uc San Joaquin.
+			Santiago,Chile 🇨🇱. Mis intereses son desarrollo web y Desarrollo de videojuegos</h2>
+		<nav class="flex flex-wrap gap-4 mt-3 justify-start">
+			<Social href="https://www.linkedin.com/in/guillermo-montecinos-/">
+				<Linkedin class="size-6"/>
+				LinkedIn
+			</Social>
+			<Social href="https://github.com/Guillermo-150">
+				<Github class="size-6"/>
+				Github
+			</Social>
+			<Social href="https://learn.unity.com/u/67323977edbc2a0f4cd6f0b4">
+				<Unity class="size-6"/>
+				Unity
+			</Social>
+			<Social href="mailto:gu.montecinos@duocuc.cl">
+				<School class="size-6"/>
+				gu.montecinos@duocuc.cl
+			</Social>
+			<Social href="mailto:guillermo.pako116@gmail.com">
+				<Email class="size-6"/>
+				guillermo.pako116@gmail.com
+			</Social>
+			<Social href="https://www.instagram.com/guillermo.151/">
+				<Instragram class="size-6"/>
+				Guillermo.151
+			</Social>
+		</nav>
+	</SectionContainer>
+
+	<SectionContainer id="experiencia" class="py-10">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<Briefcase class="size-8"/>
+			Experiencia laboral</h2>
+		<Experience/>	
+	</SectionContainer>
+
+	<SectionContainer id="proyectos" class="py-2">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<Code class="size-8"/>
+			Proyectos</h2>
+		<Proyects/>	
+	</SectionContainer>
+
+	<SectionContainer id="certificaciones" class="py-8">
+		<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+			<Certification class="size-8"/>
+			Certificaciones</h2>
+		<Certificate/>	
+	</SectionContainer>
+		
+	</main>
 </Layout>

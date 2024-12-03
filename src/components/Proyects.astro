@@ -1,0 +1,66 @@
+---
+import Angular from "./Icons/Angular.astro"
+import Firebase from "./Icons/Firebase.astro"
+import Ionic from "./Icons/Ionic.astro"
+
+
+const TAGS = {
+    ANGULAR: {
+        name:"Angular",
+        class:"bg-gray  text-purple-400",
+        icon: Angular,
+    },
+    IONIC:{
+        name:"Ionic",
+        class:"bg-gray text-blue-400",
+        icon: Ionic,
+    },
+    FIREBASE:{
+        name:"Firebase",
+        class:"bg-gray text-yellow-400",
+        icon: Firebase,
+    }
+}
+
+const PROJECTS =[
+    {
+        title: 'RegistrAPP - Modulo de aplicacion movil para la toma de asistencias.',
+        description:'Modulo de toma de asistencia que fue solicitado para la entrega en aplicaciones moviles en Duoc UC, creado con Angular, Ionic y Firebase con autenticacion y proteccion de rutas.',
+        link:'#',
+        github:'#',
+        image:'/Img/254shots_so.webp',
+        tags:[TAGS.ANGULAR,TAGS.IONIC,TAGS.FIREBASE],
+
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, tags, image}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2 text-pretty">
+                {title}
+            </h3>
+            <p class="text-base font-normal text-gray-300 mb-4 text-pretty">
+                {description}
+            </p>
+            <ul class="flex gap-x-4 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <span class={`flex items-center gap-x-2 rounded-full  ${tag.class} py-2 px-4
+                            rounded-full border border-white/10 flex justify-center items-center gap-x-2 bg-white/5
+                            hover:scale-110 hover:bg-white/15 transition mb-3`}>
+                            <tag.icon class="size-8" />
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-purple-900" 
+                src={image} 
+                alt={`Captura de pantalla del proyecto ${title}`} 
+            />
+        </article>
+    ))
+}

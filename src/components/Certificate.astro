@@ -1,0 +1,43 @@
+---
+const CERTIFICATION=[
+    {
+        image:'/Img/Unity_Essentials.webp',
+        title:'Unity Essentials Pathway',
+        issued:'Unity Technologies',
+        link:'https://www.credly.com/badges/b9f88edf-d41f-4bfb-8882-37f9482906d3/linked_in_profile',
+
+    },
+    {
+        image:'/Img/JavaScript_Essentials.webp',
+        title:'JavaScript Essentials 1',
+        issued:'Cisco',
+        link:'https://www.credly.com/badges/08d7db6a-ca13-4e7d-9519-73d956817a08/linked_in_profile', 
+    }
+     
+]
+---
+
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4">
+    {CERTIFICATION.map(({ image, title, issued, link }) => (
+      <article class="bg-gray-800 text-white p-6 rounded-lg shadow-lg shadow-purple-900">
+        <div class="grid place-items-center">
+          <img class="rounded"
+            src={image}
+            alt={`Captura de pantalla del proyecto ${image}`}/>
+        </div>
+        <h3 class="text-xl font-semibold text-center">{title}</h3>
+        <h6 class="font-light text-center mb-2">Emisor: {issued}</h6>
+        <p class="text-center">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-blue-400 hover:underline"
+            >Ver Certificación</a>
+        </p>
+      </article>
+    ))}
+  </div>
+  

@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE=[
+    {
+        date: "Actualmente...",
+        title: "Estudiante Duoc Uc - San Joaquín",
+        description:"Buscando la mejora continua de mis habilidades y el desarrollo de proyectos con profesores dentro de la institución.",
+        link:"https://www2.duoc.cl/citt/index.html",
+    },
+    {
+        date: "Diciembre 2019",
+        title: "Auxiliar de Venta Minorista - Falabella Retail S.A",
+        description:"Apoyo para la temporada de navidad 2019 en Falabella Arauco Maipu, superamos las metas de la temporada y del año por sobre de un 10%.",
+        
+    }
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-4">  
+    {
+        EXPERIENCE.map(experience=>(
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }                
+    
+</ol>
+
